@@ -1,0 +1,292 @@
+/*GENERAL*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+:root{
+    --main-color: #fff;
+    --secondary-color: #111;
+    --text-color-one: #7a7a7a;
+    --bg-color-one: #0d71d7;
+    --btn-color-one: #333;
+    --btn-color-two: #13aa52;
+    --btn-color-three: #d83e39;
+
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--bg-color-one);
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    font-size: 1.75rem;
+}
+h2{
+    font-size: 1.15rem;
+}
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.hide{
+    display: none !important;
+}
+.sub-btn{
+    padding: 0 .75rem;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+.invalid-input{
+    border: 1px solid red !important; 
+}
+/*LAYOUT AND STYLE*/
+
+/*select part*/
+
+.main-content-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1.25rem;
+}
+.main-content-header{
+    text-align: center;
+    margin-top: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 100;
+}
+.main-content-header h1{
+    text-transform: uppercase;
+}
+.main-content-header h2{
+    margin-top: 1.25rem;
+    color: var(--secondary-color)   ;
+}
+.select-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.25rem;
+}
+.select-date{
+    display: flex;
+    gap: 1rem;
+}
+#dropdown-button{
+    position: relative;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+    background-color: var(--main-color);
+}
+#dropdown-button:hover{
+    cursor: pointer;
+}
+#dropdown-button span{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.dropdown-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .95rem 1rem;
+    height: 57px;
+    background-color: #7a7a7a;
+}
+.dropdown-icon i{
+    font-size: 1.25rem;
+}
+#error-message{
+    color: var(--btn-color-three);
+}
+#dropdown-list{
+    padding: .75rem 0;
+    text-align: left;
+    background-color: var(--main-color);
+}
+.dropdown-option{
+    padding: .35rem 0 .25rem 1.25rem;
+}
+.dropdown-option:hover{
+    cursor: pointer;
+    background-color: var(--bg-color-one);
+}
+#generate-btn{
+    height: 57px;
+    padding: 0 .75rem;
+    background: transparent;
+    border: 1.5px solid var(--btn-color-one);
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: .95rem;
+    text-transform: uppercase;
+}
+#generate-btn:hover{
+    background-color: var(--btn-color-one);
+}
+/*result section*/
+
+.result-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .5rem;
+}
+.your-sign-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.your-sign{
+    font-size: 1.75rem;
+    font-weight: 100;
+    color: var(--secondary-color);
+}
+.your-sign:first-child{
+    text-transform: capitalize;
+}
+.your-sign img{
+    width: 25px;
+    height: 25px;
+}
+#choosen-sign{
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-style: italic;
+}
+.sign-icon{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.sign-definition{
+    text-align: center;
+    width: 50%;
+    margin: 2rem 0;
+    font-weight: 100;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.check-correctness{
+    text-align: center;
+    font-weight: 100;
+}
+.check-correctness h1{
+    margin-bottom: 1.25rem;
+}
+.check-correctness-controls{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.25rem;
+}
+.check-correctness-controls button{
+    width: 150px;
+    padding: .75rem 0;
+    color: var(--main-color);
+    font-size: 1.25rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+} 
+#check-true-btn{
+    background-color: var(--btn-color-two);
+}
+#check-false-btn{
+    background-color: var(--btn-color-three);
+}
+
+/*conclusion*/
+
+#conclusion{
+    margin-top: 3.063rem;
+    text-align: center;
+    font-weight: 100;
+}
+#conclusion div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+#corect-horoscope-result,
+#incorect-horoscope-result{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: center;
+}
+#try-again-btn{
+    padding: .75rem 2rem;
+    background-color: var(--btn-color-one);
+    color: var(--main-color);
+    font-size: 1.15rem;
+}
+.case-wrong h1{
+    font-size: 1.25rem;
+}
+.case-right p {
+    color: var(--main-color);
+}
+
+/*KEYFRAMES*/
+
+/*fade in and fade out*/
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1300px) {
+    .sign-definition{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sign-definition{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .sign-definition{
+        width: 95%;
+        font-size: 1rem;
+    }
+    .check-correctness h1,
+    .your-sign{
+        font-size: 1.5rem;
+    }
+    .check-correctness-controls button{
+        width: 125px;
+        font-size: 1rem;
+    }
+}
